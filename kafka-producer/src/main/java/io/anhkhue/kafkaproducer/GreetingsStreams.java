@@ -5,7 +5,7 @@ import org.springframework.cloud.stream.annotation.Output;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.SubscribableChannel;
 
-public interface GreetingsStream {
+public interface GreetingsStreams {
 
     String GREETINGS_IN = "greetingsIn";
     String GREETINGS_OUT = "greetingsOut";
@@ -15,5 +15,4 @@ public interface GreetingsStream {
 
     @Output(GREETINGS_OUT)
     MessageChannel greetingsOut();
-
 }
