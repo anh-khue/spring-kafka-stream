@@ -1,4 +1,4 @@
-package io.anhkhue.kafkaproducer;
+package io.anhkhue.kafkaconsumer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.stream.annotation.StreamListener;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class GreetingsListener {
 
     @StreamListener(GreetingsStreams.GREETINGS_IN)
-    public void processGreetings(@Payload Greetings greetings) {
-        log.info("Received greetings: {}", greetings);
+    public void processMessage(@Payload Greetings greetings) {
+        log.info("Received message: {}", greetings);
     }
 }
