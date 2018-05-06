@@ -1,7 +1,6 @@
 package io.anhkhue.kafkaproducer;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHeaders;
 import org.springframework.messaging.support.MessageBuilder;
@@ -18,7 +17,7 @@ public class GreetingsService {
         this.greetingsStreams = greetingsStreams;
     }
 
-    public void sendGreetings(final Greetings greetings) {
+    void sendGreetings(final Greetings greetings) {
         log.info("Sending greetings {}", greetings);
 
         MessageChannel messageChannel = greetingsStreams.greetingsOut();

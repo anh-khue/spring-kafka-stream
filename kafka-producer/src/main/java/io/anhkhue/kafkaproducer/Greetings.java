@@ -1,10 +1,11 @@
 package io.anhkhue.kafkaproducer;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
-@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @ToString
 @Builder
 public class Greetings {
